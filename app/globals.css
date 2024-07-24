@@ -2,32 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer componetnts {
+  .nav_link {
+    @apply tracking-widest px-6 py-2 uppercase transition duration-300 block sm:inline-block  rounded-none sm:rounded-sm hover:bg-white hover:text-black !important;
+  }
+  .nav_link_active {
+    @apply bg-slate-50 font-medium text-black !important;
+  }
+  .social_links {
+    @apply text-custom4 text-3xl;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @media (max-width: 299px) {
+    .w-299-hidden {
+      display: none;
+    }
+  }
+  .banner_lt {
+    background-color: #fff;
+    background-image: linear-gradient(
+        rgba(249, 247, 246, 0.6),
+        rgba(249, 247, 246, 0.6)
+      ),
+      url(../public/images/gal2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .form_div form {
+    display: flex;
+    gap: 20px;
+  }
+  .form_div form select {
+    min-width: 220px;
+  }
+  .form_div form button {
+    min-width: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .form_div form {
+    display: block;
+    gap: 10px;
+  }
+  .form_div form select {
+    min-width: 100%;
   }
 }
