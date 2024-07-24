@@ -177,7 +177,7 @@ const PropertyPage = () => {
                                 onClick={open}
                                 src={`/images/properties/${img}`}
                                 alt={`Image ${index + 1}`}
-                                className='w-[200px]'
+                                className='w-[200px] cursor-pointer'
                                 width={0}
                                 height={0}
                                 sizes='100vw'
