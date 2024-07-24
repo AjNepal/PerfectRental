@@ -31,23 +31,4 @@
     background-size: cover;
     background-position: center;
   }
-  .form_div form {
-    display: flex;
-    gap: 20px;
-  }
-  .form_div form select {
-    min-width: 220px;
-  }
-  .form_div form button {
-    min-width: 100px;
-  }
-}
-@media (max-width: 767px) {
-  .form_div form {
-    display: block;
-    gap: 10px;
-  }
-  .form_div form select {
-    min-width: 100%;
-  }
 }
